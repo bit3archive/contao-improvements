@@ -60,9 +60,9 @@ if (e && e.length > 0)
 		switch ($arrParts[0])
 		{
 		case 'page':
-			$strPrpperty = $arrParts[1];
+			$strProperty = $arrParts[1];
 			global $objPage;
-			return $objPage->$strPrpperty;
+			return $objPage->$strProperty;
 		}
 		return false;
 	}
