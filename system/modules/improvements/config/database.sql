@@ -12,6 +12,6 @@
 -- 
 
 CREATE TABLE `tl_content` (
-  `imageUrl` blob NOT NULL default '',
-  `url` blob NOT NULL default '',
+  `imageUrl` blob NULL,
+  `url` blob NULL,
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
