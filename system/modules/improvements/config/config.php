@@ -37,5 +37,6 @@
  * HOOKs
  */
 $GLOBALS['TL_HOOKS']['outputBackendTemplate'][] = array('Improvements', 'hookOutputBackendTemplate');
+$GLOBALS['TL_HOOKS']['replaceInsertTags'][] = array('Improvements', 'hookReplaceInsertTags');
 
 ?>

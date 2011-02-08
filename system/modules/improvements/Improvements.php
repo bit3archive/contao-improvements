@@ -53,6 +53,19 @@ if (e && e.length > 0)
 		}
 		return $strContent;
 	}
+	
+	public function hookReplaceInsertTags($strTag)
+	{
+		$arrParts = explode('::', $strTag);
+		switch ($arrParts[0])
+		{
+		case 'page':
+			$strPrpperty = $arrParts[1];
+			global $objPage;
+			return $objPage->$strPrpperty;
+		}
+		return false;
+	}
 }
 
 ?>
