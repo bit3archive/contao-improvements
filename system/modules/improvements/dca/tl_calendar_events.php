@@ -34,12 +34,9 @@
 
 
 /**
- * Table tl_content
+ * Table tl_calendar_events
  */
-// remove max length from url fields
-unset($GLOBALS['TL_DCA']['tl_content']['fields']['imageUrl']['eval']['maxlength']);
-unset($GLOBALS['TL_DCA']['tl_content']['fields']['url']['eval']['maxlength']);
 // allow html in headlines
-$GLOBALS['TL_DCA']['tl_content']['fields']['headline']['eval']['allowHtml'] = true;
+$GLOBALS['TL_DCA']['tl_calendar_events']['fields']['title']['eval']['preserveTags'] = true;
 
 ?>
