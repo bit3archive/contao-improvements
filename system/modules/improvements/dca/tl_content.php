@@ -41,5 +41,7 @@ unset($GLOBALS['TL_DCA']['tl_content']['fields']['imageUrl']['eval']['maxlength'
 unset($GLOBALS['TL_DCA']['tl_content']['fields']['url']['eval']['maxlength']);
 // allow html in headlines
 $GLOBALS['TL_DCA']['tl_content']['fields']['headline']['eval']['allowHtml'] = true;
+// allow html in caption
+$GLOBALS['TL_DCA']['tl_content']['fields']['caption']['eval']['allowHtml'] = true;
 
 ?>
