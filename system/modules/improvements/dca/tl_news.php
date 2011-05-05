@@ -39,5 +39,7 @@
 // allow html in headlines
 $GLOBALS['TL_DCA']['tl_news']['fields']['headline']['eval']['preserveTags'] = true;
 $GLOBALS['TL_DCA']['tl_news']['fields']['subheadline']['eval']['preserveTags'] = true;
+// allow html in caption
+$GLOBALS['TL_DCA']['tl_news']['fields']['caption']['eval']['allowHtml'] = true;
 
 ?>

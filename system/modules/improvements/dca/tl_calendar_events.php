@@ -38,5 +38,7 @@
  */
 // allow html in headlines
 $GLOBALS['TL_DCA']['tl_calendar_events']['fields']['title']['eval']['preserveTags'] = true;
+// allow html in caption
+$GLOBALS['TL_DCA']['tl_calendar_events']['fields']['caption']['eval']['allowHtml'] = true;
 
 ?>
