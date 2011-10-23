@@ -63,14 +63,24 @@ $(window).addEvent(\'domready\', function() {
 	
 	public function hookReplaceInsertTags($strTag)
 	{
-		$arrParts = explode('::', $strTag);
+		$arrParts = explode('::', $strTag, 2);
+
+		// basic insert tags
 		switch ($arrParts[0])
 		{
-		case 'page':
-			$strProperty = $arrParts[1];
-			global $objPage;
-			return $objPage->$strProperty;
+			// access page properties
+			case 'page':
+				$strProperty = $arrParts[1];
+				global $objPage;
+				return $objPage->$strProperty;
 		}
+
+		// wrapper insert tags
+		if (in_array($arrParts[0], $GLOBALS['TL_INSERTTAG_WRAPPER']))
+		{
+			return call_user_func($arrParts[0], $this->replaceInsertTags('{{' . $arrParts[1] . '}}'));
+		}
+
 		return false;
 	}
 }

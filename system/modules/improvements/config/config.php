@@ -34,6 +34,49 @@
 
 
 /**
+ * Wrapper functions
+ */
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'base64_encode';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'base64_decode';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'rawurldecode';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'rawurlencode';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'urldecode';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'urlencode';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'crc32';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'crypt';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'html_entity_decode';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'htmlentities';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'htmlspecialchars_decode';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'htmlspecialchars';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'lcfirst';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'ltrim';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'md5';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'nl2br';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'ord';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'quoted_printable_decode';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'quoted_printable_encode';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'quotemeta';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'rtrim';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'sha1';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'soundex';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'str_rot13';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'str_shuffle';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'str_split';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'str_word_count';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'strip_tags';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'stripcslashes';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'stripslashes';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'strlen';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'strrev';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'strtolower';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'strtoupper';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'trim';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'ucfirst';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'ucwords';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'wordwrap';
+
+
+/**
  * HOOKs
  */
 $GLOBALS['TL_HOOKS']['outputBackendTemplate'][] = array('Improvements', 'hookOutputBackendTemplate');
