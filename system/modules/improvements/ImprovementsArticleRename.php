@@ -32,6 +32,10 @@
  * @filesource
  */
 
+
+/**
+ * Class ImprovementsArticleRename
+ */
 class ImprovementsArticleRename extends Backend
 {
 	public function doRename($varValue, DataContainer $dc)

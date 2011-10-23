@@ -33,7 +33,11 @@
  */
 
 
-class Improvements {
+/**
+ * Class Improvements
+ */
+class Improvements extends Controller
+{
 	public function hookOutputBackendTemplate($strContent, $strTemplate)
 	{
 		if ($strTemplate == 'be_main')
