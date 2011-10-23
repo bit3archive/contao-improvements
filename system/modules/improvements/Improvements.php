@@ -42,15 +42,18 @@ class Improvements extends Controller
 	{
 		if ($strTemplate == 'be_main')
 		{
-			$strContent = str_replace('</body>', '
+			$strContent = str_replace('</body>', (version_compare(VERSION, '2.10')>=0 ? '
+<script>' : '
 <script type="text/javascript">
-<!--//--><![CDATA[//><!--
-var e = $$(\'div.tl_formbody_edit fieldset.tl_tbox input\');
-if (e && e.length > 0)
-{
-	e[0].focus();
-}
-//--><!]]>
+<!--//--><![CDATA[//><!--') . '
+$(window).addEvent(\'domready\', function() {
+	var e = $$(\'div.tl_formbody_edit fieldset.tl_tbox input[type="text"], div.tl_formbody_edit fieldset.tl_tbox input[type="checkbox"], div.tl_formbody_edit fieldset.tl_tbox input[type="radio"], div.tl_formbody_edit fieldset.tl_tbox select\');
+	if (e && e.length > 0)
+	{
+		e[0].focus();
+	}
+});' . (version_compare(VERSION, '2.10')<0 ? '
+//--><!]]>' : '') . '
 </script>
 
 </body>', $strContent);
