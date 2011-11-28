@@ -52,6 +52,7 @@ The wrapper insert tag is a flexible wrapper for other insert tags. The main syn
 - ucfirst
 - ucwords
 - wordwrap
+- standardize
 
 `<other istert tag>` can be every other insert tag, including the wrapper insert tag itself (see Recursive example).
 
