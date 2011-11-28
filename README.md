@@ -12,7 +12,7 @@ Collection of small improvements for contao.
 ## Wrapper insert tag
 
 The wrapper insert tag is a flexible wrapper for other insert tags. The main syntax is `{{<function>::<other insert tag>}}`.
-`<function>` is a string expecting function, currenty supported is:
+`<function>` is a string expecting function, currently supported is:
 
 - base64\_encode
 - base64\_decode
@@ -54,7 +54,7 @@ The wrapper insert tag is a flexible wrapper for other insert tags. The main syn
 - wordwrap
 - standardize
 
-`<other istert tag>` can be every other insert tag, including the wrapper insert tag itself (see Recursive example).
+`<other insert tag>` can be every other insert tag, including the wrapper insert tag itself (see Recursive example).
 
 ### Example
 
