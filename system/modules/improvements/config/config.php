@@ -74,6 +74,7 @@ $GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'trim';
 $GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'ucfirst';
 $GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'ucwords';
 $GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'wordwrap';
+$GLOBALS['TL_INSERTTAG_WRAPPER'][] = 'standardize';
 
 
 /**
