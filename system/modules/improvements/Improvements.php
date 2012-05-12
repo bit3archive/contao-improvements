@@ -73,6 +73,57 @@ $(window).addEvent(\'domready\', function() {
 				$strProperty = $arrParts[1];
 				global $objPage;
 				return $objPage->$strProperty;
+
+			case 'image_src':$width = null;
+				$height = null;
+				$strFile = $arrParts[1];
+				$mode = '';
+
+				// Take arguments
+				if (strpos($arrParts[1], '?') !== false)
+				{
+					$this->import('String');
+
+					$arrChunks = explode('?', urldecode($arrParts[1]), 2);
+					$strSource = $this->String->decodeEntities($arrChunks[1]);
+					$strSource = str_replace('[&]', '&', $strSource);
+					$arrParams = explode('&', $strSource);
+
+					foreach ($arrParams as $strParam)
+					{
+						list($key, $value) = explode('=', $strParam);
+
+						switch ($key)
+						{
+							case 'width':
+								$width = $value;
+								break;
+
+							case 'height':
+								$height = $value;
+								break;
+
+							case 'mode':
+								$mode = $value;
+								break;
+						}
+					}
+
+					$strFile = $arrChunks[0];
+				}
+
+				// Sanitize path
+				$strFile = str_replace('../', '', $strFile);
+
+				// Check maximum image width
+				if ($GLOBALS['TL_CONFIG']['maxImageWidth'] > 0 && $width > $GLOBALS['TL_CONFIG']['maxImageWidth'])
+				{
+					$width = $GLOBALS['TL_CONFIG']['maxImageWidth'];
+					$height = null;
+				}
+
+				// Generate the thumbnail image
+				return $this->getImage($strFile, $width, $height, $mode);
 		}
 
 		// wrapper insert tags
