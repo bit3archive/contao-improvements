@@ -34,4 +34,3 @@
 
 $GLOBALS['TL_DCA']['tl_page']['fields']['title']['save_callback'][] = array('ImprovementsArticleRename', 'doRename');
 $GLOBALS['TL_DCA']['tl_page']['fields']['title']['eval']['alwaysSave'] = true;
-?>

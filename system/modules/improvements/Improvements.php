@@ -40,7 +40,7 @@ class Improvements extends Controller
 {
 	public function hookOutputBackendTemplate($strContent, $strTemplate)
 	{
-		if ($strTemplate == 'be_main')
+		if ($strTemplate == 'be_main' && version_compare(VERSION, '3', '<'))
 		{
 			$strContent = str_replace('</body>', (version_compare(VERSION, '2.10')>=0 ? '
 <script>' : '

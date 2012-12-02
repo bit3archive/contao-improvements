@@ -43,5 +43,3 @@ unset($GLOBALS['TL_DCA']['tl_content']['fields']['url']['eval']['maxlength']);
 $GLOBALS['TL_DCA']['tl_content']['fields']['headline']['eval']['allowHtml'] = true;
 // allow html in caption
 $GLOBALS['TL_DCA']['tl_content']['fields']['caption']['eval']['allowHtml'] = true;
-
-?>
